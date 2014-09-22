@@ -3,8 +3,7 @@ if !has('python')
     finish
 endif
 
-let g:file = bufname("%")
-let g:filePath = fnamemodify( file, ':h')
+let g:filePath = fnamemodify( expand("%:p"), ':h')
 
 python << EOF
 import os
