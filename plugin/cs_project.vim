@@ -34,7 +34,7 @@ projectFileName = home + "/.vim_cscope_project"
 if os.path.isfile(projectFileName) == False:
     print "Profile not exist"
     print "Auto create `" + projectFileName + "'"
-    os.system("echo \"#example\n#projectname,/cscope/path\" > " + projectFileName);
+    os.system("echo \"#example\n#projectname,/absolute/project/path #project path should include cscope.out, if not, it will auto generate.\" > " + projectFileName);
 
 with open(projectFileName) as f:
     lines = f.read().splitlines()
